@@ -1,0 +1,27 @@
+# LangGraph Insurance Orchestrator Requirements
+
+# Core
+langgraph>=0.2.0
+langchain-core>=0.3.0
+langchain-anthropic>=0.2.0
+
+# Claude SDK
+anthropic>=0.30.0
+
+# Git integration
+gitpython>=3.1.40
+
+# Data validation
+pydantic>=2.0.0
+
+# Environment
+python-dotenv>=1.0.0
+
+# CLI UI
+rich>=13.7.0
+tqdm>=4.66.0
+
+# Dev
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+ruff>=0.4.0

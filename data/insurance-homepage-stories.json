@@ -1,0 +1,777 @@
+{
+  "project": {
+    "name": "Insurance Company Home Page",
+    "techStack": ["Framer", "Tailwind CSS"],
+    "components": ["Cards", "Carousels"],
+    "totalStories": 50
+  },
+  "stories": [
+    {
+      "id": "US-01",
+      "category": "Hero Section",
+      "priority": "Must Have",
+      "title": "Hero Banner",
+      "asA": "visitor",
+      "iWant": "to see a hero banner with compelling headline and tagline",
+      "soThat": "I immediately understand the company's value proposition",
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Headline is clear and compelling",
+        "Tagline supports the headline",
+        "Hero takes up above-the-fold space"
+      ]
+    },
+    {
+      "id": "US-02",
+      "category": "Hero Section",
+      "priority": "Must Have",
+      "title": "CTA Button",
+      "asA": "visitor",
+      "iWant": "to see a Call-to-Action button (Get Quote)",
+      "soThat": "I can start the insurance process",
+      "dependencies": ["US-01"],
+      "acceptanceCriteria": [
+        "Button is prominently displayed",
+        "Button has hover state",
+        "Button is accessible"
+      ]
+    },
+    {
+      "id": "US-03",
+      "category": "Hero Section",
+      "priority": "Must Have",
+      "title": "Background Carousel",
+      "asA": "visitor",
+      "iWant": "to see hero background images (sliding carousel)",
+      "soThat": "the page feels dynamic and professional",
+      "dependencies": ["US-01"],
+      "acceptanceCriteria": [
+        "Multiple background images available",
+        "Smooth slide transition",
+        "Images are high quality and optimized"
+      ]
+    },
+    {
+      "id": "US-04",
+      "category": "Hero Section",
+      "priority": "Should Have",
+      "title": "Auto-rotate Carousel",
+      "asA": "visitor",
+      "iWant": "to see auto-rotating carousel (5 second intervals)",
+      "soThat": "I can view multiple messages without clicking",
+      "dependencies": ["US-03"],
+      "acceptanceCriteria": [
+        "Carousel rotates every 5 seconds",
+        "Rotation is smooth and non-disruptive"
+      ]
+    },
+    {
+      "id": "US-05",
+      "category": "Hero Section",
+      "priority": "Should Have",
+      "title": "Carousel Navigation Dots",
+      "asA": "visitor",
+      "iWant": "to see carousel navigation dots",
+      "soThat": "I can manually jump to specific slides",
+      "dependencies": ["US-03", "US-04"],
+      "acceptanceCriteria": [
+        "Dots are visible and clickable",
+        "Active dot is highlighted",
+        "Clicking dot changes slide"
+      ]
+    },
+    {
+      "id": "US-06",
+      "category": "Hero Section",
+      "priority": "Could Have",
+      "title": "Parallax Scrolling Effect",
+      "asA": "visitor",
+      "iWant": "to see parallax scrolling effect on hero",
+      "soThat": "the page feels modern and engaging",
+      "dependencies": ["US-01"],
+      "acceptanceCriteria": [
+        "Parallax effect is subtle",
+        "Does not impact performance",
+        "Works on all devices"
+      ]
+    },
+    {
+      "id": "US-07",
+      "category": "Hero Section",
+      "priority": "Should Have",
+      "title": "Responsive Hero",
+      "asA": "visitor",
+      "iWant": "to see responsive hero that adapts to mobile/tablet/desktop",
+      "soThat": "I have consistent experience across devices",
+      "dependencies": ["US-01"],
+      "acceptanceCriteria": [
+        "Works on 375px (mobile)",
+        "Works on 768px (tablet)",
+        "Works on 1440px (desktop)"
+      ]
+    },
+    {
+      "id": "US-08",
+      "category": "Hero Section",
+      "priority": "Won't Have",
+      "title": "Video Background",
+      "asA": "visitor",
+      "iWant": "to see video background option in hero",
+      "soThat": "the page feels more cinematic",
+      "dependencies": ["US-03"],
+      "acceptanceCriteria": [],
+      "notes": "Performance concerns, high effort - excluded from MVP"
+    },
+    {
+      "id": "US-09",
+      "category": "Navigation & Header",
+      "priority": "Must Have",
+      "title": "Sticky Navigation Bar",
+      "asA": "visitor",
+      "iWant": "to see a sticky navigation bar",
+      "soThat": "I can access menu from anywhere on page",
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Nav bar stays fixed on scroll",
+        "Nav bar has consistent styling",
+        "Z-index is properly set"
+      ]
+    },
+    {
+      "id": "US-10",
+      "category": "Navigation & Header",
+      "priority": "Must Have",
+      "title": "Logo and Company Name",
+      "asA": "visitor",
+      "iWant": "to see logo and company name in header",
+      "soThat": "I know which company I'm viewing",
+      "dependencies": ["US-09"],
+      "acceptanceCriteria": [
+        "Logo is visible and clear",
+        "Company name is readable",
+        "Links to home page"
+      ]
+    },
+    {
+      "id": "US-11",
+      "category": "Navigation & Header",
+      "priority": "Must Have",
+      "title": "Navigation Menu Items",
+      "asA": "visitor",
+      "iWant": "to see navigation menu items (Home, About, Services, Claims, Contact)",
+      "soThat": "I can explore the site",
+      "dependencies": ["US-09", "US-10"],
+      "acceptanceCriteria": [
+        "All menu items are present",
+        "Menu items are clickable",
+        "Current page is highlighted"
+      ]
+    },
+    {
+      "id": "US-12",
+      "category": "Navigation & Header",
+      "priority": "Must Have",
+      "title": "Get Quote Button in Header",
+      "asA": "visitor",
+      "iWant": "to see a Get Quote button in header",
+      "soThat": "I can start the process from any page",
+      "dependencies": ["US-09"],
+      "acceptanceCriteria": [
+        "Button is visible in header",
+        "Button stands out from menu items",
+        "Button has hover state"
+      ]
+    },
+    {
+      "id": "US-13",
+      "category": "Navigation & Header",
+      "priority": "Should Have",
+      "title": "Hamburger Menu on Mobile",
+      "asA": "visitor",
+      "iWant": "to see a hamburger menu on mobile",
+      "soThat": "the nav doesn't take too much space on small screens",
+      "dependencies": ["US-09", "US-11"],
+      "acceptanceCriteria": [
+        "Hamburger icon appears on mobile",
+        "Menu opens on click",
+        "Menu closes on selection or outside click"
+      ]
+    },
+    {
+      "id": "US-14",
+      "category": "Navigation & Header",
+      "priority": "Could Have",
+      "title": "Search Functionality",
+      "asA": "visitor",
+      "iWant": "to see search functionality in header",
+      "soThat": "I can find specific information quickly",
+      "dependencies": ["US-09"],
+      "acceptanceCriteria": [
+        "Search icon is visible",
+        "Search input appears on click",
+        "Basic search functionality works"
+      ]
+    },
+    {
+      "id": "US-15",
+      "category": "Navigation & Header",
+      "priority": "Won't Have",
+      "title": "Multi-language Toggle",
+      "asA": "visitor",
+      "iWant": "to see multi-language toggle in header",
+      "soThat": "I can switch languages easily",
+      "dependencies": ["US-09"],
+      "acceptanceCriteria": [],
+      "notes": "Not in MVP scope - requires translation work"
+    },
+    {
+      "id": "US-16",
+      "category": "Services/Products",
+      "priority": "Must Have",
+      "title": "Insurance Product Cards",
+      "asA": "visitor",
+      "iWant": "to see insurance product cards (Life, Health, Auto, Home)",
+      "soThat": "I can understand available options",
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "4 product cards are displayed",
+        "Cards are visually distinct",
+        "Cards are properly spaced"
+      ]
+    },
+    {
+      "id": "US-17",
+      "category": "Services/Products",
+      "priority": "Should Have",
+      "title": "Card Icons",
+      "asA": "visitor",
+      "iWant": "to see card icons for each product type",
+      "soThat": "I can quickly identify categories visually",
+      "dependencies": ["US-16"],
+      "acceptanceCriteria": [
+        "Each card has relevant icon",
+        "Icons are clear and recognizable",
+        "Icons match the product type"
+      ]
+    },
+    {
+      "id": "US-18",
+      "category": "Services/Products",
+      "priority": "Must Have",
+      "title": "Card Title and Description",
+      "asA": "visitor",
+      "iWant": "to see card title and description for each product",
+      "soThat": "I understand what each insurance covers",
+      "dependencies": ["US-16"],
+      "acceptanceCriteria": [
+        "Each card has clear title",
+        "Each card has brief description",
+        "Text is readable"
+      ]
+    },
+    {
+      "id": "US-19",
+      "category": "Services/Products",
+      "priority": "Must Have",
+      "title": "Learn More Button",
+      "asA": "visitor",
+      "iWant": "to see Learn More button on each card",
+      "soThat": "I can get detailed information",
+      "dependencies": ["US-18"],
+      "acceptanceCriteria": [
+        "Button is present on each card",
+        "Button is clickable",
+        "Navigates to product detail"
+      ]
+    },
+    {
+      "id": "US-20",
+      "category": "Services/Products",
+      "priority": "Should Have",
+      "title": "Card Hover Effects",
+      "asA": "visitor",
+      "iWant": "to see card hover effects (lift, shadow, color change)",
+      "soThat": "the interface feels interactive",
+      "dependencies": ["US-16"],
+      "acceptanceCriteria": [
+        "Card lifts on hover",
+        "Shadow increases on hover",
+        "Color accent on hover"
+      ]
+    },
+    {
+      "id": "US-21",
+      "category": "Services/Products",
+      "priority": "Should Have",
+      "title": "Responsive Grid Layout",
+      "asA": "visitor",
+      "iWant": "to see 4-column grid on desktop, 2-column on tablet, 1-column on mobile",
+      "soThat": "cards are readable on all devices",
+      "dependencies": ["US-16"],
+      "acceptanceCriteria": [
+        "4 columns on desktop (>1024px)",
+        "2 columns on tablet (768-1024px)",
+        "1 column on mobile (<768px)"
+      ]
+    },
+    {
+      "id": "US-22",
+      "category": "Services/Products",
+      "priority": "Should Have",
+      "title": "Featured/Recommended Badge",
+      "asA": "visitor",
+      "iWant": "to see featured/recommended badge on popular products",
+      "soThat": "I can make informed decisions",
+      "dependencies": ["US-16"],
+      "acceptanceCriteria": [
+        "Badge is visible on featured cards",
+        "Badge does not obscure content",
+        "Badge is visually distinct"
+      ]
+    },
+    {
+      "id": "US-23",
+      "category": "Services/Products",
+      "priority": "Could Have",
+      "title": "Animated Card Entrance",
+      "asA": "visitor",
+      "iWant": "to see animated card entrance (staggered fade-in)",
+      "soThat": "the page feels polished",
+      "dependencies": ["US-16"],
+      "acceptanceCriteria": [
+        "Cards animate in sequence",
+        "Animation is smooth",
+        "Animation does not block interaction"
+      ]
+    },
+    {
+      "id": "US-24",
+      "category": "Services/Products",
+      "priority": "Could Have",
+      "title": "Customer Count or Rating",
+      "asA": "visitor",
+      "iWant": "to see customer count or rating on each card",
+      "soThat": "I can gauge popularity/trust",
+      "dependencies": ["US-16"],
+      "acceptanceCriteria": [
+        "Rating is displayed",
+        "Rating is accurate",
+        "Rating is visually clear"
+      ]
+    },
+    {
+      "id": "US-25",
+      "category": "Services/Products",
+      "priority": "Won't Have",
+      "title": "Live Pricing",
+      "asA": "visitor",
+      "iWant": "to see live pricing on cards",
+      "soThat": "I can compare costs instantly",
+      "dependencies": ["US-16"],
+      "acceptanceCriteria": [],
+      "notes": "Requires backend integration - excluded from MVP"
+    },
+    {
+      "id": "US-26",
+      "category": "Testimonials",
+      "priority": "Must Have",
+      "title": "Customer Testimonials",
+      "asA": "prospective customer",
+      "iWant": "to see customer testimonials",
+      "soThat": "I can build trust in the company",
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Multiple testimonials are displayed",
+        "Testimonials are realistic",
+        "Content is relevant"
+      ]
+    },
+    {
+      "id": "US-27",
+      "category": "Testimonials",
+      "priority": "Must Have",
+      "title": "Testimonial Carousel",
+      "asA": "prospective customer",
+      "iWant": "to see testimonial carousel",
+      "soThat": "I can view multiple reviews without scrolling",
+      "dependencies": ["US-26"],
+      "acceptanceCriteria": [
+        "Carousel displays one testimonial at a time",
+        "Smooth transition between testimonials",
+        "Carousel is accessible"
+      ]
+    },
+    {
+      "id": "US-28",
+      "category": "Testimonials",
+      "priority": "Must Have",
+      "title": "Customer Name and Photo",
+      "asA": "prospective customer",
+      "iWant": "to see customer name and photo with each testimonial",
+      "soThat": "reviews feel authentic",
+      "dependencies": ["US-26", "US-27"],
+      "acceptanceCriteria": [
+        "Name is displayed",
+        "Photo is visible",
+        "Photo is appropriate size"
+      ]
+    },
+    {
+      "id": "US-29",
+      "category": "Testimonials",
+      "priority": "Should Have",
+      "title": "Star Ratings",
+      "asA": "prospective customer",
+      "iWant": "to see star ratings (1-5) with testimonials",
+      "soThat": "I can quickly assess satisfaction",
+      "dependencies": ["US-26"],
+      "acceptanceCriteria": [
+        "Stars are displayed",
+        "Stars reflect rating",
+        "Stars are accessible"
+      ]
+    },
+    {
+      "id": "US-30",
+      "category": "Testimonials",
+      "priority": "Should Have",
+      "title": "Arrow Navigation",
+      "asA": "prospective customer",
+      "iWant": "to have left/right arrow navigation on carousel",
+      "soThat": "I can browse testimonials manually",
+      "dependencies": ["US-27"],
+      "acceptanceCriteria": [
+        "Arrows are visible",
+        "Arrows are clickable",
+        "Clicking changes testimonial"
+      ]
+    },
+    {
+      "id": "US-31",
+      "category": "Testimonials",
+      "priority": "Should Have",
+      "title": "Auto-play Testimonials",
+      "asA": "prospective customer",
+      "iWant": "to see auto-play testimonials (8 second intervals)",
+      "soThat": "the carousel feels alive",
+      "dependencies": ["US-27"],
+      "acceptanceCriteria": [
+        "Auto-advances every 8 seconds",
+        "Auto-play can be interrupted",
+        "Smooth transition"
+      ]
+    },
+    {
+      "id": "US-32",
+      "category": "Testimonials",
+      "priority": "Could Have",
+      "title": "Pause on Hover",
+      "asA": "prospective customer",
+      "iWant": "to see pause on hover functionality",
+      "soThat": "I can read testimonials at my pace",
+      "dependencies": ["US-31"],
+      "acceptanceCriteria": [
+        "Carousel pauses on hover",
+        "Carousel resumes on mouse leave",
+        "Visual indicator when paused"
+      ]
+    },
+    {
+      "id": "US-33",
+      "category": "Testimonials",
+      "priority": "Could Have",
+      "title": "Testimonial Counter",
+      "asA": "prospective customer",
+      "iWant": "to see testimonial count indicator (e.g., 3 of 12)",
+      "soThat": "I know how many reviews exist",
+      "dependencies": ["US-27"],
+      "acceptanceCriteria": [
+        "Counter is visible",
+        "Counter updates on change",
+        "Counter is accessible"
+      ]
+    },
+    {
+      "id": "US-34",
+      "category": "Stats/Numbers",
+      "priority": "Should Have",
+      "title": "Company Statistics",
+      "asA": "visitor",
+      "iWant": "to see company statistics (Years in Business, Happy Customers, Claims Paid)",
+      "soThat": "I can assess company credibility",
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Multiple stats are displayed",
+        "Stats are accurate",
+        "Stats are visually prominent"
+      ]
+    },
+    {
+      "id": "US-35",
+      "category": "Stats/Numbers",
+      "priority": "Should Have",
+      "title": "Animated Number Counters",
+      "asA": "visitor",
+      "iWant": "to see animated number counters that count up when in view",
+      "soThat": "stats feel dynamic",
+      "dependencies": ["US-34"],
+      "acceptanceCriteria": [
+        "Numbers animate when scrolled into view",
+        "Animation is smooth",
+        "Animation happens only once"
+      ]
+    },
+    {
+      "id": "US-36",
+      "category": "Stats/Numbers",
+      "priority": "Could Have",
+      "title": "Icons for Statistics",
+      "asA": "visitor",
+      "iWant": "to see icons next to each statistic",
+      "soThat": "I can quickly understand what each number represents",
+      "dependencies": ["US-34"],
+      "acceptanceCriteria": [
+        "Icons are relevant to stats",
+        "Icons are clear",
+        "Icons enhance understanding"
+      ]
+    },
+    {
+      "id": "US-37",
+      "category": "Stats/Numbers",
+      "priority": "Could Have",
+      "title": "Background Pattern",
+      "asA": "visitor",
+      "iWant": "to see subtle background pattern in stats section",
+      "soThat": "the section stands out visually",
+      "dependencies": ["US-34"],
+      "acceptanceCriteria": [
+        "Pattern is subtle",
+        "Pattern does not distract",
+        "Pattern is consistent with brand"
+      ]
+    },
+    {
+      "id": "US-38",
+      "category": "Stats/Numbers",
+      "priority": "Won't Have",
+      "title": "Live/Updating Stats",
+      "asA": "visitor",
+      "iWant": "to see live/updating stats (real-time data)",
+      "soThat": "I see current business activity",
+      "dependencies": ["US-34"],
+      "acceptanceCriteria": [],
+      "notes": "Requires real-time API - excluded from MVP"
+    },
+    {
+      "id": "US-39",
+      "category": "About/Features",
+      "priority": "Should Have",
+      "title": "Why Choose Us Section",
+      "asA": "visitor",
+      "iWant": "to see Why Choose Us section",
+      "soThat": "I understand the company's unique selling points",
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Section is prominently placed",
+        "USPs are clearly listed",
+        "Content is compelling"
+      ]
+    },
+    {
+      "id": "US-40",
+      "category": "About/Features",
+      "priority": "Should Have",
+      "title": "Feature Cards with Icons",
+      "asA": "visitor",
+      "iWant": "to see feature cards with icons (24/7 Support, Fast Claims, Best Prices)",
+      "soThat": "benefits are scannable",
+      "dependencies": ["US-39"],
+      "acceptanceCriteria": [
+        "Features are displayed as cards",
+        "Each feature has an icon",
+        "Features are clearly described"
+      ]
+    },
+    {
+      "id": "US-41",
+      "category": "About/Features",
+      "priority": "Could Have",
+      "title": "Animated Icons",
+      "asA": "visitor",
+      "iWant": "to see animated icons (subtle pulse or bounce)",
+      "soThat": "the section feels alive",
+      "dependencies": ["US-40"],
+      "acceptanceCriteria": [
+        "Animation is subtle",
+        "Animation does not distract",
+        "Animation loops smoothly"
+      ]
+    },
+    {
+      "id": "US-42",
+      "category": "About/Features",
+      "priority": "Could Have",
+      "title": "Short Video Testimonial",
+      "asA": "visitor",
+      "iWant": "to see short video testimonial in this section",
+      "soThat": "I can see real customers",
+      "dependencies": ["US-39"],
+      "acceptanceCriteria": [
+        "Video is short (<60 seconds)",
+        "Video auto-plays muted",
+        "Video has controls"
+      ]
+    },
+    {
+      "id": "US-43",
+      "category": "About/Features",
+      "priority": "Won't Have",
+      "title": "Live Chat Widget",
+      "asA": "visitor",
+      "iWant": "to see live chat widget in this section",
+      "soThat": "I can ask questions instantly",
+      "dependencies": ["US-39"],
+      "acceptanceCriteria": [],
+      "notes": "Requires backend integration - excluded from MVP"
+    },
+    {
+      "id": "US-44",
+      "category": "Footer",
+      "priority": "Must Have",
+      "title": "Footer with Company Information",
+      "asA": "visitor",
+      "iWant": "to see a footer with company information",
+      "soThat": "I can find contact details",
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Footer is present",
+        "Footer has company info",
+        "Footer is properly styled"
+      ]
+    },
+    {
+      "id": "US-45",
+      "category": "Footer",
+      "priority": "Should Have",
+      "title": "Quick Links",
+      "asA": "visitor",
+      "iWant": "to see quick links in footer (Products, Claims, FAQ, Privacy Policy)",
+      "soThat": "I can navigate important pages",
+      "dependencies": ["US-44"],
+      "acceptanceCriteria": [
+        "Links are organized",
+        "Links are clickable",
+        "Links cover key pages"
+      ]
+    },
+    {
+      "id": "US-46",
+      "category": "Footer",
+      "priority": "Should Have",
+      "title": "Contact Information",
+      "asA": "visitor",
+      "iWant": "to see contact information (Phone, Email, Address) in footer",
+      "soThat": "I know how to reach the company",
+      "dependencies": ["US-44"],
+      "acceptanceCriteria": [
+        "Phone number is displayed",
+        "Email is displayed",
+        "Address is displayed"
+      ]
+    },
+    {
+      "id": "US-47",
+      "category": "Footer",
+      "priority": "Should Have",
+      "title": "Social Media Icons",
+      "asA": "visitor",
+      "iWant": "to see social media icons in footer",
+      "soThat": "I can follow the company on other platforms",
+      "dependencies": ["US-44"],
+      "acceptanceCriteria": [
+        "Icons are visible",
+        "Icons link to correct profiles",
+        "Icons open in new tab"
+      ]
+    },
+    {
+      "id": "US-48",
+      "category": "Footer",
+      "priority": "Should Have",
+      "title": "Newsletter Signup Form",
+      "asA": "visitor",
+      "iWant": "to see newsletter signup form in footer",
+      "soThat": "I can stay updated on offers",
+      "dependencies": ["US-44"],
+      "acceptanceCriteria": [
+        "Form has email input",
+        "Form has submit button",
+        "Form has basic validation"
+      ]
+    },
+    {
+      "id": "US-49",
+      "category": "Footer",
+      "priority": "Could Have",
+      "title": "Copyright Notice",
+      "asA": "visitor",
+      "iWant": "to see copyright notice with current year",
+      "soThat": "I know the site is maintained",
+      "dependencies": ["US-44"],
+      "acceptanceCriteria": [
+        "Copyright is visible",
+        "Year is current",
+        "Company name is included"
+      ]
+    },
+    {
+      "id": "US-50",
+      "category": "Footer",
+      "priority": "Won't Have",
+      "title": "Live Chat Transcript",
+      "asA": "visitor",
+      "iWant": "to see live chat transcript in footer",
+      "soThat": "I can review past conversations",
+      "dependencies": ["US-44"],
+      "acceptanceCriteria": [],
+      "notes": "Requires backend integration - excluded from MVP"
+    }
+  ],
+  "categories": [
+    {"name": "Hero Section", "storyCount": 8},
+    {"name": "Navigation & Header", "storyCount": 7},
+    {"name": "Services/Products", "storyCount": 10},
+    {"name": "Testimonials", "storyCount": 8},
+    {"name": "Stats/Numbers", "storyCount": 5},
+    {"name": "About/Features", "storyCount": 5},
+    {"name": "Footer", "storyCount": 7}
+  ],
+  "priorities": {
+    "Must Have": 12,
+    "Should Have": 18,
+    "Could Have": 12,
+    "Won't Have": 8
+  },
+  "sprints": [
+    {
+      "sprint": 1,
+      "name": "MVP",
+      "stories": ["US-01", "US-02", "US-03", "US-09", "US-10", "US-11", "US-12", "US-16", "US-18", "US-19", "US-26", "US-44"],
+      "estimatedDays": "3-4"
+    },
+    {
+      "sprint": 2,
+      "name": "Core Features",
+      "stories": ["US-04", "US-05", "US-07", "US-13", "US-17", "US-20", "US-21", "US-22", "US-27", "US-28", "US-29", "US-30", "US-31"],
+      "estimatedDays": "3-4"
+    },
+    {
+      "sprint": 3,
+      "name": "Polish",
+      "stories": ["US-06", "US-14", "US-23", "US-24", "US-32", "US-33", "US-34", "US-35", "US-36", "US-37", "US-39", "US-40", "US-41", "US-42", "US-45", "US-46", "US-47", "US-48", "US-49"],
+      "estimatedDays": "3-4"
+    }
+  ],
+  "generatedAt": "2026-06-23T18:50:00+05:30"
+}
